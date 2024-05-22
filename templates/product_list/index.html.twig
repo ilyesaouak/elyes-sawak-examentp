@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Produits{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h1>Liste des Produits</h1>
+    <div class="list-group">
+        {% for produit in produits %}
+            <a href="#" class="list-group-item list-group-item-action">
+                <h5 class="mb-1">{{ produit.name }}</h5>
+                <p class="mb-1">{{ produit.description }}</p>
+                <small>Prix : {{ produit.price }} €</small>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
